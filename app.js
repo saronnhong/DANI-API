@@ -19,7 +19,7 @@ app.use('/profiles', profilesRoute);
 
 //Routes
 app.get('/', (req, res) => {
-    res.send("You are on the root of our REST API. Nothing happens... yet.");
+    res.send("Welcome to the REST API for Speechboard. Go to https://speechboard-api.herokuapp.com/profiles to view all user profiles.");
 })
 
 //Connect to database

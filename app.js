@@ -12,12 +12,14 @@ app.use(bodyParser.json());
 
 //Import Routes
 const postsRoute = require('./routes/posts');
+const profilesRoute = require('./routes/profiles');
 
 app.use('/posts', postsRoute);
+app.use('/profiles', profilesRoute);
 
 //Routes
 app.get('/', (req, res) => {
-    res.send("We are on home");
+    res.send("You are on the root of our REST API. Nothing happens... yet.");
 })
 
 //Connect to database

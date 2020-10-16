@@ -13,9 +13,11 @@ app.use(bodyParser.json());
 //Import Routes
 const postsRoute = require('./routes/posts');
 const profilesRoute = require('./routes/profiles');
+const wordsRoute = require('./routes/words');
 
 app.use('/posts', postsRoute);
 app.use('/profiles', profilesRoute);
+app.use('/words', wordsRoute);
 
 //Routes
 app.get('/', (req, res) => {

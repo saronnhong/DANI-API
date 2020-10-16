@@ -51,7 +51,7 @@ router.delete('/:profileId', async (req, res) => {
 router.patch('/:profileId', async (req, res) => {
     try {
         const updatedProfile = await Profile.updateOne(
-            { userId: req.body.userId },
+            { userId: req.params.profileId },
             {
                 $set: {
                     username: req.body.username,

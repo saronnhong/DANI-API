@@ -1,11 +1,27 @@
 const mongoose = require('mongoose');
 
 const WordSchema = mongoose.Schema({
-    title: {
+    id: {
         type: String,
         required: true
     },
-    description: {
+    categoryId: {
+        type: String,
+        required: true
+    },
+    word: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
+        type: String,
+        required: true
+    },
+    phonetic: {
+        type: String,
+        required: true
+    },
+    ownerId: {
         type: String,
         required: true
     },

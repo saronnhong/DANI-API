@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const ProfileSchema = mongoose.Schema({
     username: {
         type: String,
-        required: true
+        default: "N/A"
     },
     email: {
         type: String,
@@ -11,15 +11,15 @@ const ProfileSchema = mongoose.Schema({
     },
     age: {
         type: String,
-        required: true
+        default: "N/A"
     },
     imageUrl: {
         type: String,
-        required: true
+        default: "N/A"
     },
     coverImageUrl: {
         type: String,
-        required: true
+        default: "N/A"
     },
     userId: {
     type: String,

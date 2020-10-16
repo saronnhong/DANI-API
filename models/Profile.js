@@ -11,11 +11,11 @@ const ProfileSchema = mongoose.Schema({
     },
     age: {
         type: String,
-        default: "N/A"
+        default: "0"
     },
     imageUrl: {
         type: String,
-        default: "N/A"
+        default: "https://pbs.twimg.com/media/D7W9_tDU0AAWauN.png"
     },
     coverImageUrl: {
         type: String,

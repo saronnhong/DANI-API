@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
 
 router.delete('/:profileId', async (req, res) => {
     try {
-        const removedProfile = await Profile.deleteOne({ _id: req.params.profileId })
+        const removedProfile = await Profile.deleteOne({ userId: req.params.profileId })
         res.json(removedProfile);
     } catch (err) {
         res.json({ message: err });

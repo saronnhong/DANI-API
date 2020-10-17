@@ -23,7 +23,7 @@ router.get('/:profileId', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const profile = new Profile({
-        username: req.body.username,
+        name: req.body.name,
         email: req.body.email,
         age: req.body.age,
         imageUrl: req.body.imageUrl,
@@ -54,7 +54,7 @@ router.patch('/:profileId', async (req, res) => {
             { userId: req.params.profileId },
             {
                 $set: {
-                    username: req.body.username,
+                    name: req.body.name,
                     email: req.body.email,
                     age: req.body.age,
                     imageUrl: req.body.imageUrl,

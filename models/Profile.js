@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const ProfileSchema = mongoose.Schema({
-    username: {
+    name: {
         type: String,
         default: "N/A"
     },

@@ -3,27 +3,27 @@ const mongoose = require('mongoose');
 const WordSchema = mongoose.Schema({
     id: {
         type: String,
-        required: true
+        // required: true
     },
     categoryId: {
         type: String,
-        required: true
+        // required: true
     },
     word: {
         type: String,
-        required: true
+        // required: true
     },
     imageUrl: {
         type: String,
-        required: true
+        // required: true
     },
     phonetic: {
         type: String,
-        required: true
+        // required: true
     },
     ownerId: {
         type: String,
-        required: true
+        // required: true
     },
     date: {
         type: Date,

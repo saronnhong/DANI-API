@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:wordId', async (req, res) => {
     try {
-        const word = await Word.findOne({ id: req.params.wordId });
+        const word = await Word.findOne({ _id: req.params.wordId });
         res.json(word);
     } catch (err) {
         res.json({ message: err });
@@ -23,7 +23,7 @@ router.get('/:wordId', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const word = new Word({
-        id: req.body.id,
+        // id: req.body.id,
         categoryId: req.body.categoryId,
         word: req.body.word,
         imageUrl: req.body.imageUrl,
@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
 
 router.delete('/:wordId', async (req, res) => {
     try {
-        const removedWord = await Word.deleteOne({ id: req.params.wordId })
+        const removedWord = await Word.deleteOne({ _id: req.params.wordId })
         res.json(removedWord);
     } catch (err) {
         res.json({ message: err });
@@ -51,10 +51,10 @@ router.delete('/:wordId', async (req, res) => {
 router.patch('/:wordId', async (req, res) => {
     try {
         const updatedWord = await Word.updateOne(
-            { id: req.params.wordId },
+            { _id: req.params.wordId },
             {
                 $set: {
-                    id: req.body.id,
+                    _id: req.body._id,
                     categoryId: req.body.categoryId,
                     word: req.body.word,
                     imageUrl: req.body.imageUrl,

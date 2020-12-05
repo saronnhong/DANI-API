@@ -26,6 +26,7 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         email: req.body.email,
         age: req.body.age,
+        dateOfBirth: req.body.dateOfBirth,
         imageUrl: req.body.imageUrl,
         coverImageUrl: req.body.coverImageUrl,
         userId: req.body.userId
@@ -57,6 +58,7 @@ router.patch('/:profileId', async (req, res) => {
                     name: req.body.name,
                     email: req.body.email,
                     age: req.body.age,
+                    dateOfBirth: req.body.dateOfBirth,
                     imageUrl: req.body.imageUrl,
                     coverImageUrl: req.body.coverImageUrl
                 }

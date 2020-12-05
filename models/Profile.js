@@ -13,6 +13,10 @@ const ProfileSchema = mongoose.Schema({
         type: String,
         default: "N/A"
     },
+    dateOfBirth: {
+        type: String,
+        default: "N/A"
+    },
     imageUrl: {
         type: String,
         default: "N/A"

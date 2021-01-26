@@ -14,10 +14,12 @@ app.use(bodyParser.json());
 const postsRoute = require('./routes/posts');
 const profilesRoute = require('./routes/profiles');
 const wordsRoute = require('./routes/words');
+const analyticsRoute = require('./routes/analytics');
 
 app.use('/posts', postsRoute);
 app.use('/profiles', profilesRoute);
 app.use('/words', wordsRoute);
+app.use('/analytics', analyticsRoute);
 
 //Routes
 app.get('/', (req, res) => {

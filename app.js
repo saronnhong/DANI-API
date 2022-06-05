@@ -15,11 +15,14 @@ const postsRoute = require('./routes/posts');
 const profilesRoute = require('./routes/profiles');
 const wordsRoute = require('./routes/words');
 const analyticsRoute = require('./routes/analytics');
+const settingsRoute = require('./routes/settings');
+
 
 app.use('/posts', postsRoute);
 app.use('/profiles', profilesRoute);
 app.use('/words', wordsRoute);
 app.use('/analytics', analyticsRoute);
+app.use('/settings', settingsRoute);
 
 //Routes
 app.get('/', (req, res) => {

@@ -11,16 +11,20 @@ const SettingsSchema = mongoose.Schema({
     },
     pitch: {
         type: String,
-        required: "2"
+        default: "2"
     },
     rate: {
         type: String,
-        required: "1"
+        default: "1"
     },
     silentMode: {
         type: Boolean,
-        required: false
+        default: false
     },
+    userId: {
+        type: String,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('Settings', SettingsSchema);

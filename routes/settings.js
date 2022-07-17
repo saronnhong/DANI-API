@@ -27,7 +27,8 @@ router.post('/', async (req, res) => {
         voice: req.body.voice,
         pitch: req.body.pitch,
         rate: req.body.rate,
-        silentMode: req.body.silentMode
+        silentMode: req.body.silentMode,
+        userId: req.body.userId
     })
 
     try {
@@ -57,7 +58,8 @@ router.patch('/:userId', async (req, res) => {
                     voice: req.body.voice,
                     pitch: req.body.pitch,
                     rate: req.body.rate,
-                    silentMode: req.body.silentMode
+                    silentMode: req.body.silentMode,
+                    userId: req.body.userId
                 }
             }
         );
